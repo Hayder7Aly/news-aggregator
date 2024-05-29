@@ -2,7 +2,6 @@
 
 export const navs = [
     { nav: "Home", page: "/" },
-    { nav: "General", page: "/categories/general" },
     { nav: "Business", page: "/categories/business" },
     { nav: "Sports", page: "/categories/sports" },
     { nav: "Science", page: "/categories/science" },
@@ -10,4 +9,6 @@ export const navs = [
     { nav: "Entertainment", page: "/categories/entertainment" },
     { nav: "Technology", page: "/categories/technology" },
   ];
+
+  export const sources = ["News Api", "BBC", "New York"]
   
