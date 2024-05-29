@@ -3,6 +3,7 @@ import { navs, sources } from "../../config/config";
 import DatePickerInput from "./DatePicker";
 import { formatDate } from "../../utils/utils";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import RadioButtonGroup from "../sharedComponents/RadioButtonGroup";
 
 
 const Modal = ({ toggleModal }) => {
@@ -28,6 +29,7 @@ const Modal = ({ toggleModal }) => {
     // console.log(filtered);
     toggleModal()
 
+    console.log(filtered)
     history.push(`/search?sources=${filtered.source}&category=${filtered.category}&from=${filtered.date}`);
     setFilter({
       source: "",
@@ -104,7 +106,7 @@ const Modal = ({ toggleModal }) => {
                   </select>
                 </div>
                 <div className="col-span-2 ">
-                  <div>
+                  {/* <div>
                     <h3 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900">
                       Source
                     </h3>
@@ -130,7 +132,9 @@ const Modal = ({ toggleModal }) => {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </div> */}
+
+                  <RadioButtonGroup onInputChangeHandler={onInputChangeHandler} />
                 </div>
 
                 <div className="col-span-2">
@@ -141,7 +145,7 @@ const Modal = ({ toggleModal }) => {
                 </div>
               </div>
 
-              <button
+              <button     
                 type="submit"
                 className={`text-white inline-flex items-center ${(filtered.source || filtered.category ) ? "bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" : "bg-gray-400 cursor-not-allowed" }  font-medium rounded-lg text-sm px-5 py-2.5 text-center `}
                 onClick={onFilteredHanlder}

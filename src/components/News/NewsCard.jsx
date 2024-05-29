@@ -29,14 +29,12 @@ const NewsCard = ({
           </h1>
           <p className="leading-relaxed mb-3">{description}</p>
           <div className="flex items-center justify-between ">
-          <a href={url ?? "https://biztoc.com/x/ad745dc66815683e"} target="_blank">
-            <button
-              type="button"
-              className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
-            >
-
-              Read More
-            </button>
+          <a class="text-gray-400 inline-flex items-center md:mb-2 lg:mb-0 hover:underline" href={url ?? "https://biztoc.com/x/ad745dc66815683e"} target="_blank">
+            Read More
+          <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
             </a>
             <p className="text-sm text-gray-500">{author}</p>
           </div>

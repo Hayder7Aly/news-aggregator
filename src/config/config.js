@@ -11,4 +11,25 @@ export const navs = [
   ];
 
   export const sources = ["News Api", "BBC", "New York"]
+
+
+  export const categories = {
+    "education" : "Education",
+    "business" : "Business",
+    "sports" : "Sports",
+    "science" : "Science",
+    "health" : "Health",
+    "entertainment" : "Entertainment",
+    "technology" : "Technology",
+    "general" : "General"
+  }
   
+
+  export const authors = {
+    entrepreneur: "Entrepreneur",
+    CNBC : "CNBC",
+    Reuters: "Reuters",
+    Eric: "Eric",
+    Scott : "Scott"
+  
+  }
